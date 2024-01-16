@@ -15,7 +15,7 @@ const initWallet = async () => {
       .on('error', error => reject(error))
       .on('data', row => {
         wallets.push({
-          address: row['地址'],
+          address: row['addr'],
         })
       })
       .on('end', () => resolve(wallets))
